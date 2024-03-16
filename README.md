@@ -1,2 +1,2 @@
 # Enginnering-Build-Up-Club
-workshop
+Software Development Team
