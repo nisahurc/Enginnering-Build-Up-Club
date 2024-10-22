@@ -1,3 +1,35 @@
+:root { 
+    --background-color: #ffffff; 
+    --default-color: #1a1f24; 
+    --heading-color: #485664; 
+    --accent-color: #0ea2bd; 
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+  }
+  
+  
+  :root {
+    --nav-color: #485664;
+    --nav-hover-color: #0ea2bd; 
+    --nav-mobile-background-color: #ffffff;
+    --nav-dropdown-background-color: #ffffff;
+    --nav-dropdown-color: #485664; 
+    --nav-dropdown-hover-color: #0ea2bd; 
+  }
+  
+  
+  .light-background {
+    --background-color: #eef0f2;
+    --surface-color: #ffffff;
+  }
+  
+  .dark-background {
+    --background-color: #3a4753;
+    --default-color: #ffffff;
+    --heading-color: #ffffff;
+    --surface-color: #4f6171;
+    --contrast-color: #ffffff;
+  }
 /*** Spinner Start ***/
 
 #spinner {
@@ -230,7 +262,7 @@
         font-size: 400%;
     }
 }
-
+/*** Navbar End ***/
 .carousel-item::after {
     content: "";
     width: 100%;
@@ -238,9 +270,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, .6);
+    background:  rgba(0, 0, 0, 0.2);
 }
-
 .carousel-caption {
     height: 100%;
     display: flex;
@@ -402,8 +433,17 @@
 
 }
 
+
+
+
+
+
+
+
+
+
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/slide1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/slide1.png) center center no-repeat;
     background-size: cover;
 }
 
@@ -418,8 +458,90 @@
 }
 
 /*** Carousel End ***/
-
-
+.features .nav-tabs {
+    border: 0;
+  }
+  
+  .features .nav-link {
+    background-color: var(--surface-color);
+    color: var(--color-secondary);
+    border: 0;
+    padding: 25px 20px;
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0s;
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  .features .nav-link i {
+    font-size: 32px;
+    line-height: 0;
+  }
+  
+  .features .nav-link h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+  }
+  
+  .features .nav-link:hover {
+    color: var(--accent-color);
+  }
+  
+  .features .nav-link:hover,
+  .features .nav-link.active {
+    transition: 0.3s;
+    background: var(--accent-color);
+    color: var(--contrast-color) !important;
+    border-color: var(--accent-color);
+  }
+  
+  .features .nav-link:hover h4,
+  .features .nav-link.active h4 {
+    color: var(--contrast-color);
+  }
+  
+  .features .nav-link:hover i,
+  .features .nav-link.active i {
+    color: var(--contrast-color) !important;
+  }
+  
+  .features .tab-content {
+    margin-top: 30px;
+  }
+  
+  .features .tab-pane.active {
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  .features .tab-pane h3 {
+    font-weight: 600;
+    font-size: 28px;
+  }
+  
+  .features .tab-pane ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features .tab-pane ul li {
+    padding-bottom: 10px;
+  }
+  
+  .features .tab-pane ul i {
+    font-size: 24px;
+    margin-right: 4px;
+    color: var(--accent-color);
+  }
+  
+  .features .tab-pane p:last-child {
+    margin-bottom: 0;
+  }
 /*** Services Start ***/
 
 .services .services-item {
@@ -580,6 +702,46 @@
 }
 
 /*** Blog End ***/
+/** Gallery Carousel Start 
+***/
+
+
+
+
+
+@media (max-width: 768px) { 
+    .gallery_carousel{
+        max-height: 250px;
+        min-height: 250px;
+    
+    } 
+
+ }
+
+ @media (min-width: 992px) {
+    .gallery_carousel{
+        max-height: 300px;
+        min-height: 300px;
+    
+    } 
+}
+
+@media (min-width: 1200px) { 
+    .gallery_carousel{
+        max-height: 600px;
+        min-height: 600px;
+    
+    } 
+
+ }
+
+@media (min-width: 1400px) { 
+    .gallery_carousel{
+        max-height: 800px;
+        min-height: 800px;
+    
+    } 
+ }
 
 
 /*** Team Start ***/
@@ -638,6 +800,9 @@
     top: -100px;
     right: 50px;
     display: flex;
+}
+.mail_size{
+    font-size: 80%;
 }
 
 .team-carousel .owl-nav .owl-prev,
@@ -728,7 +893,7 @@
 .contact-detail::before {
     position: absolute;
     content: "";
-    height: 50%;
+    height: 100%;
     width: 100%;
     top: 0;
     left: 0;
@@ -739,11 +904,11 @@
 }
 
 .contact-map {
-    background: #26d48c;
+    background: #8c4ffc;
 }
 
 .contact-form {
-    background: #26d48c;
+    background: #8c4ffc;
 }
 
 /*** Contact End ***/
